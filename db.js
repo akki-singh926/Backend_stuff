@@ -1,9 +1,9 @@
 const mongoose=require('mongoose');
 require('dotenv').config();
-const password = encodeURIComponent(process.env.DB_PASS);
+//const password = encodeURIComponent(process.env.DB_PASS);
 
-const mongoURL = `mongodb+srv://${process.env.DB_USER}:${password}@${process.env.DB_HOST}/${process.env.DB_NAME}?retryWrites=true&w=majority&appName=Cluster0`;
-//const mongoURL=process.env.LOCAL;
+//const mongoURL = `mongodb+srv://${process.env.DB_USER}:${password}@${process.env.DB_HOST}/${process.env.DB_NAME}?retryWrites=true&w=majority&appName=Cluster0`;
+const mongoURL=process.env.LOCAL;
 
 mongoose.connect(mongoURL,{
     useNewUrlParser:true,
