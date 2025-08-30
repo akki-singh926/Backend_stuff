@@ -1,4 +1,5 @@
-
+require('dotenv').config();
+const port=process.env.PORT||3000;
 const express=require('express');
 const app = express()
 const db=require('./db');
@@ -15,5 +16,6 @@ app.use('/person',personRoutes);
 
 const menuRoutes=require('./Routes/menuRoutes');
 app.use('/menu',menuRoutes);
+const PORT=process.env.PORT||3000;
 
-app.listen(3000)
+app.listen(port)
