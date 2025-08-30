@@ -5,6 +5,7 @@ const app = express()
 const db=require('./db');
 const bodyParser=require('body-parser');
 app.use(bodyParser.json());
+const PORT=process.env.PORT||3000;
 
 app.get('/', (req, res) => {
   res.send('Hello World')
@@ -16,6 +17,6 @@ app.use('/person',personRoutes);
 
 const menuRoutes=require('./Routes/menuRoutes');
 app.use('/menu',menuRoutes);
-const PORT=process.env.PORT||3000;
 
-app.listen(port)
+
+app.listen(PORT)
