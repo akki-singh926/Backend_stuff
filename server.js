@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 app.get('/login',function(req,res){res.send("welcome to my first server");})
 
 const personRoutes=require('./Routes/personRoutes');
-app.use('/person',localauthmiddleware,personRoutes);
+app.use('/person',personRoutes);
 
 const menuRoutes=require('./Routes/menuRoutes');
 app.use('/menu',menuRoutes);
